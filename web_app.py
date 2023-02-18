@@ -16,8 +16,7 @@ def add_todo():     # this is a callback function
 
 st.title('My Todo App')
 
-clock = time.strftime('%b %d, %Y %H:%M:%S')
-st.subheader(f'Clock {clock}')
+st.subheader(time.strftime('%b %d, %Y %H:%M:%S'))
 
 for todo in todos:
     checkbox = st.checkbox(todo, key=todo)
