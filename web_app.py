@@ -1,5 +1,6 @@
 import streamlit as st
 import functions
+import time
 
 # streamlit run to_do_app/web.py
 # streamlit = framework for data analytics and machine learning
@@ -14,7 +15,7 @@ def add_todo():     # this is a callback function
 
 
 st.title('My Todo App')
-
+st.subheader(time.strftime('%b %d, %Y %H:%M:%S'))
 
 for todo in todos:
     checkbox = st.checkbox(todo, key=todo)
